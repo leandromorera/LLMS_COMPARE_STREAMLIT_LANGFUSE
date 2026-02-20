@@ -552,7 +552,7 @@ Your code                    MCP Server              Langfuse
 ```
 
 <img width="1849" height="975" alt="image" src="https://github.com/user-attachments/assets/e5262000-da4c-42b6-ba9e-98a524bdb1c2" />
-<img width="1849" height="975" alt="image" src="https://github.com/user-attachments/assets/a4a2b1a5-ed70-4395-abe0-0ee6de072676" />
+
 <img width="1849" height="975" alt="image" src="https://github.com/user-attachments/assets/1391d2d3-ae71-4f28-a1e2-ab950f95070c" />
 
 
