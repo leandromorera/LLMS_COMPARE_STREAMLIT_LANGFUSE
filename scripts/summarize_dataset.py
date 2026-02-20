@@ -54,8 +54,13 @@ def main():
             print(f"Processed {i+1}/{len(rows)}...")
 
     output_path = Path(args.output_dir) / "dataset_summary.json"
+    summary = {
+        "total": len(rows),
+        "by_label": {k: len(v) for k, v in by_label.items()},
+        "features": features,
+    }
     with open(output_path, "w") as f:
-        json.dump({"total": len(rows), "by_label": {k: len(v) for k, v in by_label.items()}, "features": features}, f, indent=2)
+        json.dump(summary, f, indent=2)
     print(f"Report saved to {output_path}")
 
 

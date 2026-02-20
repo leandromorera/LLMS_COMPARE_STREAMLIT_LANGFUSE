@@ -25,7 +25,9 @@ from src.dataset import load_dataset, find_image_path, find_ocr_path, load_eval_
 from src.judge import run_all_judges, JUDGE_CONFIGS
 
 # Page config
-st.set_page_config(page_title="Receipt Forgery Detector", page_icon="🧾", layout="wide")
+MAX_BATCH_SIZE = 30  # Safety cap on batch evaluation to control API costs
+
+
 
 # --- Sidebar ---
 st.sidebar.title("🧾 Receipt Forgery Detector")
@@ -253,7 +255,7 @@ with tab3:
                 st.session_state['batch_selection'] = random.sample(names, min(5, len(names)))
         with col2:
             if st.button("✓ All"):
-                st.session_state['batch_selection'] = names[:30]
+                st.session_state['batch_selection'] = names[:MAX_BATCH_SIZE]
         with col3:
             if st.button("✕ Clear"):
                 st.session_state['batch_selection'] = []

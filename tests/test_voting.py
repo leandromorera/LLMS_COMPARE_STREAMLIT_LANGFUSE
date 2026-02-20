@@ -54,8 +54,8 @@ class TestMajorityVote:
         assert majority_vote(["FAKE", "REAL", "UNCERTAIN"]) == "UNCERTAIN"
 
     def test_fake_checked_before_real(self):
-        # Both have 1 vote, should be UNCERTAIN
-        assert majority_vote(["FAKE", "REAL", "UNCERTAIN"]) == "UNCERTAIN"
+        # 2 FAKE + 1 REAL → FAKE wins (not REAL, because FAKE is checked first)
+        assert majority_vote(["FAKE", "FAKE", "REAL"]) == "FAKE"
 
     def test_two_uncertain_is_uncertain(self):
         assert majority_vote(["UNCERTAIN", "UNCERTAIN", "REAL"]) == "UNCERTAIN"

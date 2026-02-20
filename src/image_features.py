@@ -7,6 +7,7 @@ try:
     import numpy as np
     _CV2_AVAILABLE = True
 except ImportError:
+    np = None  # type: ignore[assignment]
     _CV2_AVAILABLE = False
 
 try:
@@ -58,7 +59,6 @@ def brightness_contrast(image_path: str) -> dict:
         img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
         if img is None:
             return {"brightness": -1.0, "contrast": -1.0}
-        import numpy as np
         arr = img.astype(float) / 255.0
         return {
             "brightness": round(float(arr.mean()), 4),

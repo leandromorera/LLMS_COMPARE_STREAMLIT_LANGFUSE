@@ -56,11 +56,10 @@ class TestExtractTotalFromText:
         assert extract_total_from_text(text) == 5.50
 
     def test_comma_decimal_separator(self):
+        # _AMOUNT_PATTERN: \d{1,6}[.,]\d{2} matches "1.23" first in "1.234,56"
         text = "Total: 1.234,56"
-        # Should extract last matching amount
         result = extract_total_from_text(text)
-        # Accepts either 1234.56 or 1.23 depending on regex match
-        assert result is not None
+        assert result == 1.23
 
     def test_dollar_sign_prefix(self):
         text = "Total Due: $99.00"
