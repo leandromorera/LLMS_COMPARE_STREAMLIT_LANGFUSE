@@ -144,7 +144,7 @@ def run_judge(
             messages=messages,
             temperature=temperature,
             response_format={"type": "json_object"},
-            max_tokens=512,
+            max_tokens=int(os.environ.get("JUDGE_MAX_TOKENS", "512")),
         )
         raw_text = response.choices[0].message.content
         try:
