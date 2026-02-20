@@ -1,3 +1,6 @@
+<img width="1898" height="1012" alt="image" src="https://github.com/user-attachments/assets/253c7530-8de8-41e1-bd0d-024b5bc8ebe7" />
+
+
 # LLM-Judge Fake Receipt Detector
 
 A forensic document analysis system that uses multiple OpenAI vision models as
@@ -39,6 +42,14 @@ It does so by:
   **Langfuse** via a local MCP server
 
 ---
+
+## Dataset Analisis
+
+- Image dimensions and file size distributions.
+- Aspect ratio distributions
+- Sharpnes, Brightness and Contrast distributions
+
+<img width="1895" height="993" alt="image" src="https://github.com/user-attachments/assets/15a9b5b7-304a-4068-8589-8c827f871e36" />
 
 ## Architecture
 
@@ -159,6 +170,9 @@ The image is sent as a base-64 data URL in the `image_url` content block.
 The `response_format: json_object` mode is used where supported; otherwise the
 JSON is extracted from free text.
 
+
+<img width="1849" height="961" alt="image" src="https://github.com/user-attachments/assets/ce1f30be-63cb-4f70-b64d-499aa404ddf7" />
+
 ### 3. Majority vote
 
 ```
@@ -182,6 +196,10 @@ Langfuse trace:
 | `inter_judge_agreement` | 1.0 or 0.0 | All three judges agreed |
 
 ---
+
+<img width="1849" height="929" alt="image" src="https://github.com/user-attachments/assets/e9f60fc0-933a-4000-9e4e-3e1f273c3b32" />
+<img width="1849" height="967" alt="image" src="https://github.com/user-attachments/assets/6781a985-b549-46c8-b74e-372f81dbe390" />
+
 
 ## Project Structure
 
@@ -532,6 +550,11 @@ Your code                    MCP Server              Langfuse
     │◀──────── result ───────────│                       │  generation
     │                            │                       │  score
 ```
+
+<img width="1849" height="975" alt="image" src="https://github.com/user-attachments/assets/e5262000-da4c-42b6-ba9e-98a524bdb1c2" />
+<img width="1849" height="975" alt="image" src="https://github.com/user-attachments/assets/a4a2b1a5-ed70-4395-abe0-0ee6de072676" />
+<img width="1849" height="975" alt="image" src="https://github.com/user-attachments/assets/1391d2d3-ae71-4f28-a1e2-ab950f95070c" />
+
 
 ### What gets logged per evaluation run
 
