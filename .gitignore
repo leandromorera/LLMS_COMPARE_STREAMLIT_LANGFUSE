@@ -1,0 +1,10 @@
+.env
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+data/eval_cache.json
+*.pptx
+reports/
+notebooks/.ipynb_checkpoints/
+.DS_Store
