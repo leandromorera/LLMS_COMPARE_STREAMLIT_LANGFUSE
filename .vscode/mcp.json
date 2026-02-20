@@ -1,0 +1,8 @@
+{
+  "servers": {
+    "mcpLangFuse": {
+      "type": "http",
+      "url": "http://localhost:8005/mcp"
+    }
+  }
+}
